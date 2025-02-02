@@ -32,6 +32,11 @@ build-backend = "poetry.core.masonry.api"
 ```bash
 poetry add django
 ```
+Para instalar o projeto localmente, instale o poetry e use o comando, com dependencias de desenvolvimento.
+
+```bash
+poetry install --with dev
+```
 
 ## Ativando o ambiente
 
@@ -65,3 +70,4 @@ INSTALLED_APPS = [
 ]    
 ```
 Além disso no arquivo apps.py da app, deve-se ajustar o nome da app adicionado o devpro.{nome_da_app}.
+
