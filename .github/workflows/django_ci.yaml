@@ -14,9 +14,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - name: Comando de sucesso
-        run: ls /
-      - name: Comando de erro
-        run: ls /não/existe
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install poetry
+          poetry install --with dev --sync
+
+      - name: Run Djando tests with coverage
+        run: |
+          poetry run pytest devpro --cov=devpro --cov-fail-under=82

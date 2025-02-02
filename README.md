@@ -41,7 +41,7 @@ poetry install --with dev
 ## Ativando o ambiente
 
 ```bash
-source $(poetry env info --path)/bin/activat
+source $(poetry env info --path)/bin/activate
 ```
 
 ## Criando o projeto
@@ -71,3 +71,16 @@ INSTALLED_APPS = [
 ```
 Além disso no arquivo apps.py da app, deve-se ajustar o nome da app adicionado o devpro.{nome_da_app}.
 
+## instalando dependencia de cobertura de teste
+
+```bash
+poetry add pytest-cov --group dev
+```
+
+## Executando os testes
+
+```bash
+pytest devporo/ --cov=devpro
+pytest devporo/ --cov=devpro --cov-report=html
+pytest devporo/ --cov=devpro --cov-fail-under=92 
+```
