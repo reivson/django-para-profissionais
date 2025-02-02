@@ -84,3 +84,22 @@ pytest devporo/ --cov=devpro
 pytest devporo/ --cov=devpro --cov-report=html
 pytest devporo/ --cov=devpro --cov-fail-under=92 
 ```
+
+Para rodar testes automáticos com pytest e gerar relatório de cobertura:
+
+```bash
+pytest devporo/ --cov=devpro --cov-report=html
+pytest devporo/ --cov=devpro --cov-fail-under=92 
+```
+
+
+
+
+```bash
+git add .
+git commit 
+  --> # mensagem do commit
+  --> # Close #11  --> fechando a issue 11
+git push
+git push --set-upstream origin 11
+```
